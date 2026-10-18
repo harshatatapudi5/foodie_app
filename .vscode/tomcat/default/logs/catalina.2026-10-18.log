@@ -1,0 +1,36 @@
+18-Oct-2026 16:42:57.454 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.1.59
+18-Oct-2026 16:42:57.458 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Aug 13 2026 16:59:10 UTC
+18-Oct-2026 16:42:57.459 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.1.59.0
+18-Oct-2026 16:42:57.459 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+18-Oct-2026 16:42:57.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+18-Oct-2026 16:42:57.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+18-Oct-2026 16:42:57.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Eclipse Adoptium\jdk-25.0.4.101-hotspot
+18-Oct-2026 16:42:57.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           25.0.4.1+1-LTS
+18-Oct-2026 16:42:57.461 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Eclipse Adoptium
+18-Oct-2026 16:42:57.461 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\Harsha\OneDrive\Desktop\JEE\.vscode\tomcat\default
+18-Oct-2026 16:42:57.461 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\SOFTWARE\apache-tomcat-10.1.59-windows-x64\apache-tomcat-10.1.59
+18-Oct-2026 16:42:57.496 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=c:\Users\Harsha\OneDrive\Desktop\JEE\.vscode\tomcat\default\conf\logging.properties
+18-Oct-2026 16:42:57.497 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+18-Oct-2026 16:42:57.497 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dfile.encoding=UTF-8
+18-Oct-2026 16:42:57.497 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+18-Oct-2026 16:42:57.497 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+18-Oct-2026 16:42:57.497 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dsun.io.useCanonCaches=false
+18-Oct-2026 16:42:57.497 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+18-Oct-2026 16:42:57.498 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang.reflect=ALL-UNNAMED
+18-Oct-2026 16:42:57.498 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+18-Oct-2026 16:42:57.498 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+18-Oct-2026 16:42:57.498 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+18-Oct-2026 16:42:57.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+18-Oct-2026 16:42:57.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -agentlib:jdwp=transport=dt_socket,address=localhost:5005,server=y,suspend=n
+18-Oct-2026 16:42:57.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=c:\Users\Harsha\OneDrive\Desktop\JEE\.vscode\tomcat\default
+18-Oct-2026 16:42:57.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:/SOFTWARE/apache-tomcat-10.1.59-windows-x64/apache-tomcat-10.1.59
+18-Oct-2026 16:42:57.499 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=c:\Users\Harsha\OneDrive\Desktop\JEE\.vscode\tomcat\default\temp
+18-Oct-2026 16:42:57.541 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [2.0.15] using APR version [1.7.6].
+18-Oct-2026 16:42:57.558 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.5.7 9 Jun 2026]
+18-Oct-2026 16:42:58.088 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+18-Oct-2026 16:42:58.136 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1163] milliseconds
+18-Oct-2026 16:42:58.243 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+18-Oct-2026 16:42:58.243 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.1.59]
+18-Oct-2026 16:42:59.974 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18-Oct-2026 16:43:00.097 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+18-Oct-2026 16:43:00.157 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2016] milliseconds

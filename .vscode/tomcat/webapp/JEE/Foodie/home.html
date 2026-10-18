@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie - Good Food • Happy Mood | Delicious Food Delivered</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Home CSS -->
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         1. NAVBAR
+         ========================================================= -->
+
+    <header class="header-navbar" id="headerNavbar">
+
+        <div class="nav-container">
+
+            <!-- Brand -->
+            <div class="brand-group">
+
+                <a href="home.html"
+                   class="brand-logo"
+                   aria-label="Foodie Home">
+
+                    <span class="brand-icon">🍊</span>
+                    <span class="brand-name">Foodie</span>
+
+                </a>
+
+                <span class="brand-tagline">
+                    Good Food • Happy Mood
+                </span>
+
+            </div>
+
+
+            <!-- Navigation -->
+            <nav class="nav-center">
+
+                <ul class="nav-links" id="navLinks">
+
+                    <li>
+                        <a href="home.html"
+                           class="nav-link active">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/JEE/restaurant"
+                           class="nav-link">
+                            Restaurants
+                        </a>
+                    </li>
+
+                    <!-- Menu starts from Restaurant selection -->
+                    <li>
+                        <a href="/JEE/restaurant"
+                           class="nav-link">
+                            Menu
+                        </a>
+                    </li>
+
+                    <!-- Orders page is still static for now -->
+                    <li>
+                        <a href="orders.html"
+                           class="nav-link">
+                            Orders
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- Right Side -->
+            <div class="nav-actions">
+
+                <!-- Search -->
+                <div class="nav-search-wrap">
+
+                    <span class="nav-search-icon">
+                        🔍
+                    </span>
+
+                    <input
+                        type="text"
+                        id="navSearchInput"
+                        class="nav-search-input"
+                        placeholder="Search food, restaurants..."
+                        aria-label="Search food and restaurants">
+
+                </div>
+
+
+                <!-- Cart -->
+                <a href="/JEE/cart"
+                   class="cart-nav-btn"
+                   id="navCartBtn"
+                   aria-label="View Cart">
+
+                    <span class="cart-icon">
+                        🛒
+                    </span>
+
+                    <span class="cart-label">
+                        Cart
+                    </span>
+
+                    <span class="cart-badge"
+                          id="navCartBadge">
+                        0
+                    </span>
+
+                </a>
+
+
+                <!-- Login -->
+                <a href="/JEE/login.jsp"
+                   class="nav-login-btn"
+                   id="navLoginBtn">
+
+                    <span class="login-avatar">
+                        👤
+                    </span>
+
+                    <span>
+                        Login
+                    </span>
+
+                </a>
+
+
+                <!-- Mobile Menu -->
+                <button
+                    class="mobile-toggle-btn"
+                    id="mobileMenuToggle"
+                    aria-label="Toggle Navigation Menu">
+
+                    ☰
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         2. HERO SECTION
+         ========================================================= -->
+
+    <section class="hero-section">
+
+        <div class="hero-bg-accent"></div>
+
+        <div class="hero-container">
+
+            <!-- Hero Content -->
+            <div class="hero-content">
+
+                <div class="hero-badge">
+
+                    <span class="badge-sparkle">
+                        ✨
+                    </span>
+
+                    Satisfy Your Cravings
+
+                </div>
+
+
+                <h1 class="hero-title">
+
+                    Delicious Food<br>
+
+                    <span class="highlight-orange">
+                        Delivered
+                    </span>
+
+                    to Your Door
+
+                </h1>
+
+
+                <p class="hero-subtitle">
+
+                    Fresh ingredients • Fast delivery • Great taste
+
+                </p>
+
+
+                <!-- Search -->
+                <div class="hero-search-box">
+
+                    <span class="search-box-icon">
+                        🔍
+                    </span>
+
+                    <input
+                        type="text"
+                        id="heroSearchInput"
+                        class="hero-search-input"
+                        placeholder="Search for restaurants, dishes or cuisines..."
+                        aria-label="Search restaurants dishes or cuisines"
+                        autocomplete="off">
+
+                    <button
+                        class="btn-hero-search"
+                        id="heroSearchBtn">
+
+                        Search
+
+                    </button>
+
+                </div>
+
+
+                <!-- Perks -->
+                <div class="hero-perks">
+
+                    <div class="perk-item">
+
+                        <span class="perk-icon">
+                            ⚡
+                        </span>
+
+                        <span>
+                            30 Mins Delivery
+                        </span>
+
+                    </div>
+
+
+                    <div class="perk-item">
+
+                        <span class="perk-icon">
+                            🌱
+                        </span>
+
+                        <span>
+                            100% Fresh Quality
+                        </span>
+
+                    </div>
+
+
+                    <div class="perk-item">
+
+                        <span class="perk-icon">
+                            🛵
+                        </span>
+
+                        <span>
+                            Free Delivery on ₹199+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Visual -->
+            <div class="hero-visual-wrapper">
+
+                <div class="script-tag-badge">
+
+                    <span class="script-tag-text">
+                        Good Food<br>
+                        Good Mood
+                    </span>
+
+                    <span class="script-sparkle">
+                        ❤️
+                    </span>
+
+                </div>
+
+
+                <div class="floating-badge badge-top-right">
+
+                    <span class="star-rating">
+                        ⭐ 4.9
+                    </span>
+
+                    <span class="badge-subtext">
+                        Super Chef Choice
+                    </span>
+
+                </div>
+
+
+                <div class="floating-badge badge-bottom-left">
+
+                    <span class="delivery-icon-bubble">
+                        🛵
+                    </span>
+
+                    <div>
+
+                        <div class="badge-bold">
+                            25–35 mins
+                        </div>
+
+                        <div class="badge-subtext">
+                            Express Hot Delivery
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Main Food -->
+                <div class="hero-dish-card"
+                     id="heroDishCard">
+
+                    <img
+                        src="images/hero/hero-biryani.jpg"
+                        alt="Royal Chicken Biryani with Raita"
+                        id="heroCarouselImg"
+                        class="hero-dish-img"
+                        onerror="this.src='images/menu/chicken-biryani.jpg'">
+
+                </div>
+
+
+                <!-- Carousel -->
+                <div class="carousel-nav-bar"
+                     id="carouselNavBar">
+
+                    <button
+                        class="carousel-arrow btn-prev"
+                        id="carouselPrevBtn"
+                        aria-label="Previous Slide">
+
+                        <svg width="20"
+                             height="20"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2.5"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <polyline points="15 18 9 12 15 6"></polyline>
+
+                        </svg>
+
+                    </button>
+
+
+                    <div
+                        class="carousel-dots"
+                        id="carouselDots"
+                        role="tablist"
+                        aria-label="Carousel Slides">
+
+                        <button class="dot active"
+                                data-slide="0"
+                                role="tab"
+                                aria-label="Slide 1">
+                        </button>
+
+                        <button class="dot"
+                                data-slide="1"
+                                role="tab"
+                                aria-label="Slide 2">
+                        </button>
+
+                        <button class="dot"
+                                data-slide="2"
+                                role="tab"
+                                aria-label="Slide 3">
+                        </button>
+
+                        <button class="dot"
+                                data-slide="3"
+                                role="tab"
+                                aria-label="Slide 4">
+                        </button>
+
+                    </div>
+
+
+                    <button
+                        class="carousel-arrow btn-next"
+                        id="carouselNextBtn"
+                        aria-label="Next Slide">
+
+                        <svg width="20"
+                             height="20"
+                             viewBox="0 0 24 24"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2.5"
+                             stroke-linecap="round"
+                             stroke-linejoin="round">
+
+                            <polyline points="9 18 15 12 9 6"></polyline>
+
+                        </svg>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         3. EXPLORE BY CATEGORY
+         ========================================================= -->
+
+    <section class="section-wrapper"
+             id="categoriesSection">
+
+        <div class="section-header">
+
+            <div>
+
+                <h2 class="section-title">
+                    Explore by Category
+                </h2>
+
+                <p class="section-subtitle">
+                    Find your favorite food, all in one place
+                </p>
+
+            </div>
+
+
+            <div class="section-actions">
+
+                <button
+                    class="scroll-arrow-btn"
+                    id="catScrollLeft"
+                    aria-label="Scroll Left">
+                    ‹
+                </button>
+
+                <button
+                    class="scroll-arrow-btn"
+                    id="catScrollRight"
+                    aria-label="Scroll Right">
+                    ›
+                </button>
+
+                <a href="/JEE/restaurant"
+                   class="section-view-all">
+                    View All →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="categories-scroll-row"
+             id="categoriesScrollRow">
+
+            <!-- Category cards -->
+
+            <div class="category-pill-card cat-biryani"
+                 data-category="biryani"
+                 role="button"
+                 tabindex="0">
+
+                <div class="cat-img-box">
+
+                    <img
+                        src="images/hero/hero-biryani.jpg"
+                        alt="Biryani"
+                        onerror="this.src='images/menu/chicken-biryani.jpg'">
+
+                </div>
+
+                <span class="cat-name">
+                    Biryani
+                </span>
+
+                <span class="cat-arrow-btn">
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="category-pill-card cat-pizza"
+                 data-category="pizza"
+                 role="button"
+                 tabindex="0">
+
+                <div class="cat-img-box">
+
+                    <img
+                        src="images/restaurants/dominos.jpg"
+                        alt="Pizza"
+                        onerror="this.src='images/menu/pizza.jpg'">
+
+                </div>
+
+                <span class="cat-name">
+                    Pizza
+                </span>
+
+                <span class="cat-arrow-btn">
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="category-pill-card cat-burger"
+                 data-category="burger"
+                 role="button"
+                 tabindex="0">
+
+                <div class="cat-img-box">
+
+                    <img
+                        src="images/restaurants/mcdonalds.jpg"
+                        alt="Burger"
+                        onerror="this.src='images/menu/burger.jpg'">
+
+                </div>
+
+                <span class="cat-name">
+                    Burger
+                </span>
+
+                <span class="cat-arrow-btn">
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="category-pill-card cat-sandwich"
+                 data-category="sandwich"
+                 role="button"
+                 tabindex="0">
+
+                <div class="cat-img-box">
+
+                    <img
+                        src="images/categories/sandwich.jpg"
+                        alt="Sandwich"
+                        onerror="this.src='images/restaurants/subway.jpg'">
+
+                </div>
+
+                <span class="cat-name">
+                    Sandwich
+                </span>
+
+                <span class="cat-arrow-btn">
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="category-pill-card cat-snacks"
+                 data-category="snacks"
+                 role="button"
+                 tabindex="0">
+
+                <div class="cat-img-box">
+
+                    <img
+                        src="images/menu/samosa.jpg"
+                        alt="Snacks"
+                        onerror="this.src='images/categories/snacks.svg'">
+
+                </div>
+
+                <span class="cat-name">
+                    Snacks
+                </span>
+
+                <span class="cat-arrow-btn">
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="category-pill-card cat-beverages"
+                 data-category="beverages"
+                 role="button"
+                 tabindex="0">
+
+                <div class="cat-img-box">
+
+                    <img
+                        src="images/menu/cold-coffee.jpg"
+                        alt="Beverages"
+                        onerror="this.src='images/categories/beverages.svg'">
+
+                </div>
+
+                <span class="cat-name">
+                    Beverages
+                </span>
+
+                <span class="cat-arrow-btn">
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="category-pill-card cat-desserts"
+                 data-category="desserts"
+                 role="button"
+                 tabindex="0">
+
+                <div class="cat-img-box">
+
+                    <img
+                        src="images/categories/dessert.jpg"
+                        alt="Desserts"
+                        onerror="this.src='images/menu/gulab-jamun.jpg'">
+
+                </div>
+
+                <span class="cat-name">
+                    Desserts
+                </span>
+
+                <span class="cat-arrow-btn">
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="category-pill-card cat-chicken"
+                 data-category="chicken"
+                 role="button"
+                 tabindex="0">
+
+                <div class="cat-img-box">
+
+                    <img
+                        src="images/restaurants/kfc.jpg"
+                        alt="Chicken"
+                        onerror="this.src='images/menu/chicken-curry.jpg'">
+
+                </div>
+
+                <span class="cat-name">
+                    Chicken
+                </span>
+
+                <span class="cat-arrow-btn">
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="category-pill-card cat-south-indian"
+                 data-category="south indian"
+                 role="button"
+                 tabindex="0">
+
+                <div class="cat-img-box">
+
+                    <img
+                        src="images/menu/masala-dosa.jpg"
+                        alt="South Indian"
+                        onerror="this.src='images/menu/idly.jpg'">
+
+                </div>
+
+                <span class="cat-name">
+                    South Indian
+                </span>
+
+                <span class="cat-arrow-btn">
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="category-pill-card cat-chinese"
+                 data-category="chinese"
+                 role="button"
+                 tabindex="0">
+
+                <div class="cat-img-box">
+
+                    <img
+                        src="images/menu/noodles.jpg"
+                        alt="Chinese"
+                        onerror="this.src='images/menu/veg-fried-rice.jpg'">
+
+                </div>
+
+                <span class="cat-name">
+                    Chinese
+                </span>
+
+                <span class="cat-arrow-btn">
+                    →
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         4. POPULAR RESTAURANTS
+         ========================================================= -->
+
+    <section class="section-wrapper"
+             id="restaurantsSection">
+
+        <div class="section-header">
+
+            <div>
+
+                <h2 class="section-title">
+                    Popular Restaurants
+                </h2>
+
+                <p class="section-subtitle">
+                    Discover popular restaurants and food brands
+                </p>
+
+            </div>
+
+
+            <div class="section-actions">
+
+                <a href="/JEE/restaurant"
+                   class="section-view-all">
+                    View All →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="filter-indicator-bar"
+             id="filterIndicatorBar"
+             style="display:none;">
+
+            <span>
+                Showing results for:
+                <strong id="activeSearchTag">
+                    All
+                </strong>
+            </span>
+
+            <button
+                class="btn-clear-filter"
+                id="btnClearFilter">
+                Clear Filter ✕
+            </button>
+
+        </div>
+
+
+        <div class="restaurants-grid"
+             id="restaurantsGrid">
+
+
+            <!-- =====================================================
+                 KFC
+                 Database res_id = 1
+                 ===================================================== -->
+
+            <article class="restaurant-card"
+                     data-name="KFC"
+                     data-cuisines="chicken, burgers, fast food, snacks">
+
+                <div class="card-media">
+
+                    <img
+                        src="images/restaurants/kfc.jpg"
+                        alt="KFC Crispy Chicken"
+                        loading="lazy"
+                        onerror="this.src='images/menu/burger.jpg'">
+
+                    <button
+                        class="btn-heart-fav"
+                        data-id="kfc"
+                        aria-label="Add to favorites">
+                        ♡
+                    </button>
+
+                    <div class="rating-pill">
+                        ⭐ 4.4
+                    </div>
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <h3 class="restaurant-title">
+                        KFC
+                    </h3>
+
+                    <p class="restaurant-cuisine">
+                        Chicken • Burgers • Fast Food
+                    </p>
+
+                    <div class="card-meta">
+
+                        <span class="meta-item">
+                            🚲 25–35 mins
+                        </span>
+
+                        <span class="meta-item">
+                            📍 1.8 km
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-bottom">
+
+                        <span class="category-tag">
+                            🍗 Crisp & Fresh
+                        </span>
+
+                        <a
+                            href="/JEE/menu?resId=1"
+                            class="btn-circle-arrow"
+                            aria-label="View KFC Menu">
+                            →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================================
+                 DOMINO'S
+                 Database res_id = 2
+                 ===================================================== -->
+
+            <article class="restaurant-card"
+                     data-name="Domino's Pizza"
+                     data-cuisines="pizza, italian, fast food">
+
+                <div class="card-media">
+
+                    <img
+                        src="images/restaurants/dominos.jpg"
+                        alt="Domino's Cheesy Pizza"
+                        loading="lazy"
+                        onerror="this.src='images/menu/pizza.jpg'">
+
+                    <button
+                        class="btn-heart-fav"
+                        data-id="dominos"
+                        aria-label="Add to favorites">
+                        ♡
+                    </button>
+
+                    <div class="rating-pill">
+                        ⭐ 4.5
+                    </div>
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <h3 class="restaurant-title">
+                        Domino's Pizza
+                    </h3>
+
+                    <p class="restaurant-cuisine">
+                        Pizza • Italian • Fast Food
+                    </p>
+
+                    <div class="card-meta">
+
+                        <span class="meta-item">
+                            🚲 25–35 mins
+                        </span>
+
+                        <span class="meta-item">
+                            📍 2.1 km
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-bottom">
+
+                        <span class="category-tag">
+                            🍕 Hot & Cheesy
+                        </span>
+
+                        <a
+                            href="/JEE/menu?resId=2"
+                            class="btn-circle-arrow"
+                            aria-label="View Domino's Menu">
+                            →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================================
+                 McDonald's
+                 Database res_id = 3
+                 ===================================================== -->
+
+            <article class="restaurant-card"
+                     data-name="McDonald's"
+                     data-cuisines="burgers, fast food, beverages, fries">
+
+                <div class="card-media">
+
+                    <img
+                        src="images/restaurants/mcdonalds.jpg"
+                        alt="McDonald's Burger and Fries"
+                        loading="lazy"
+                        onerror="this.src='images/menu/burger.jpg'">
+
+                    <button
+                        class="btn-heart-fav"
+                        data-id="mcdonalds"
+                        aria-label="Add to favorites">
+                        ♡
+                    </button>
+
+                    <div class="rating-pill">
+                        ⭐ 4.3
+                    </div>
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <h3 class="restaurant-title">
+                        McDonald's
+                    </h3>
+
+                    <p class="restaurant-cuisine">
+                        Burgers • Fast Food • Beverages
+                    </p>
+
+                    <div class="card-meta">
+
+                        <span class="meta-item">
+                            🚲 20–30 mins
+                        </span>
+
+                        <span class="meta-item">
+                            📍 1.5 km
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-bottom">
+
+                        <span class="category-tag">
+                            🍔 Super Combos
+                        </span>
+
+                        <a
+                            href="/JEE/menu?resId=3"
+                            class="btn-circle-arrow"
+                            aria-label="View McDonald's Menu">
+                            →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================================
+                 PIZZA HUT
+                 Database res_id = 4
+                 ===================================================== -->
+
+            <article class="restaurant-card"
+                     data-name="Pizza Hut"
+                     data-cuisines="pizza, italian, beverages">
+
+                <div class="card-media">
+
+                    <img
+                        src="images/restaurants/pizzahut.jpg"
+                        alt="Pizza Hut Pan Pizza"
+                        loading="lazy"
+                        onerror="this.src='images/menu/pizza.jpg'">
+
+                    <button
+                        class="btn-heart-fav"
+                        data-id="pizzahut"
+                        aria-label="Add to favorites">
+                        ♡
+                    </button>
+
+                    <div class="rating-pill">
+                        ⭐ 4.4
+                    </div>
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <h3 class="restaurant-title">
+                        Pizza Hut
+                    </h3>
+
+                    <p class="restaurant-cuisine">
+                        Pizza • Italian • Beverages
+                    </p>
+
+                    <div class="card-meta">
+
+                        <span class="meta-item">
+                            🚲 25–35 mins
+                        </span>
+
+                        <span class="meta-item">
+                            📍 2.4 km
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-bottom">
+
+                        <span class="category-tag">
+                            🍕 Stuffed Crust
+                        </span>
+
+                        <a
+                            href="/JEE/menu?resId=4"
+                            class="btn-circle-arrow"
+                            aria-label="View Pizza Hut Menu">
+                            →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================================
+                 SUBWAY
+                 Database res_id = 5
+                 ===================================================== -->
+
+            <article class="restaurant-card"
+                     data-name="Subway"
+                     data-cuisines="sandwiches, healthy, fast food">
+
+                <div class="card-media">
+
+                    <img
+                        src="images/restaurants/subway.jpg"
+                        alt="Subway Fresh Submarine Sandwich"
+                        loading="lazy"
+                        onerror="this.src='images/categories/sandwich.jpg'">
+
+                    <button
+                        class="btn-heart-fav"
+                        data-id="subway"
+                        aria-label="Add to favorites">
+                        ♡
+                    </button>
+
+                    <div class="rating-pill">
+                        ⭐ 4.3
+                    </div>
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <h3 class="restaurant-title">
+                        Subway
+                    </h3>
+
+                    <p class="restaurant-cuisine">
+                        Sandwiches • Healthy • Fast Food
+                    </p>
+
+                    <div class="card-meta">
+
+                        <span class="meta-item">
+                            🚲 25–35 mins
+                        </span>
+
+                        <span class="meta-item">
+                            📍 1.9 km
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-bottom">
+
+                        <span class="category-tag">
+                            🥗 Eat Fresh
+                        </span>
+
+                        <a
+                            href="/JEE/menu?resId=5"
+                            class="btn-circle-arrow"
+                            aria-label="View Subway Menu">
+                            →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================================
+                 BURGER KING
+                 Database res_id = 6
+                 ===================================================== -->
+
+            <article class="restaurant-card"
+                     data-name="Burger King"
+                     data-cuisines="burgers, fast food, fries">
+
+                <div class="card-media">
+
+                    <img
+                        src="images/restaurants/burgerking.jpg"
+                        alt="Burger King Whopper and Fries"
+                        loading="lazy"
+                        onerror="this.src='images/menu/burger.jpg'">
+
+                    <button
+                        class="btn-heart-fav"
+                        data-id="burgerking"
+                        aria-label="Add to favorites">
+                        ♡
+                    </button>
+
+                    <div class="rating-pill">
+                        ⭐ 4.4
+                    </div>
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <h3 class="restaurant-title">
+                        Burger King
+                    </h3>
+
+                    <p class="restaurant-cuisine">
+                        Burgers • Fast Food • Fries
+                    </p>
+
+                    <div class="card-meta">
+
+                        <span class="meta-item">
+                            🚲 20–30 mins
+                        </span>
+
+                        <span class="meta-item">
+                            📍 2.2 km
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-bottom">
+
+                        <span class="category-tag">
+                            🔥 Flame Grilled
+                        </span>
+
+                        <a
+                            href="/JEE/menu?resId=6"
+                            class="btn-circle-arrow"
+                            aria-label="View Burger King Menu">
+                            →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================================
+                 SPICE GARDEN
+                 Database res_id = 7
+                 ===================================================== -->
+
+            <article class="restaurant-card"
+                     data-name="Spice Garden"
+                     data-cuisines="biryani, north indian, chinese">
+
+                <div class="card-media">
+
+                    <img
+                        src="images/restaurants/spice-garden.jpg"
+                        alt="Spice Garden Royal Biryani"
+                        loading="lazy"
+                        onerror="this.src='images/hero/hero-biryani.jpg'">
+
+                    <button
+                        class="btn-heart-fav"
+                        data-id="spicegarden"
+                        aria-label="Add to favorites">
+                        ♡
+                    </button>
+
+                    <div class="rating-pill">
+                        ⭐ 4.5
+                    </div>
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <h3 class="restaurant-title">
+                        Spice Garden
+                    </h3>
+
+                    <p class="restaurant-cuisine">
+                        Biryani • North Indian • Chinese
+                    </p>
+
+                    <div class="card-meta">
+
+                        <span class="meta-item">
+                            🚲 30–40 mins
+                        </span>
+
+                        <span class="meta-item">
+                            📍 1.2 km
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-bottom">
+
+                        <span class="category-tag">
+                            🍛 Authentic Dum
+                        </span>
+
+                        <a
+                            href="/JEE/menu?resId=7"
+                            class="btn-circle-arrow"
+                            aria-label="View Spice Garden Menu">
+                            →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- =====================================================
+                 DESSERT FACTORY
+                 No DB restaurant ID supplied yet
+                 ===================================================== -->
+
+            <article class="restaurant-card"
+                     data-name="The Dessert Factory"
+                     data-cuisines="desserts, beverages, cakes">
+
+                <div class="card-media">
+
+                    <img
+                        src="images/restaurants/dessert-factory.jpg"
+                        alt="The Dessert Factory Chocolate Cake"
+                        loading="lazy"
+                        onerror="this.src='images/categories/dessert.jpg'">
+
+                    <button
+                        class="btn-heart-fav"
+                        data-id="dessertfactory"
+                        aria-label="Add to favorites">
+                        ♡
+                    </button>
+
+                    <div class="rating-pill">
+                        ⭐ 4.6
+                    </div>
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <h3 class="restaurant-title">
+                        The Dessert Factory
+                    </h3>
+
+                    <p class="restaurant-cuisine">
+                        Desserts • Beverages • Cakes
+                    </p>
+
+                    <div class="card-meta">
+
+                        <span class="meta-item">
+                            🚲 20–30 mins
+                        </span>
+
+                        <span class="meta-item">
+                            📍 3.1 km
+                        </span>
+
+                    </div>
+
+
+                    <div class="card-bottom">
+
+                        <span class="category-tag">
+                            🍨 Sweet Tooth
+                        </span>
+
+                        <!-- No resId supplied for this restaurant -->
+                        <a
+                            href="/JEE/restaurant"
+                            class="btn-circle-arrow"
+                            aria-label="View restaurants">
+                            →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         5. FAMOUS FOOD BRANDS
+         ========================================================= -->
+
+    <section class="section-wrapper"
+             id="brandsSection">
+
+        <div class="section-header">
+
+            <div>
+
+                <h2 class="section-title">
+                    Famous Food Brands
+                </h2>
+
+                <p class="section-subtitle">
+                    Order from some of your favorite food brands
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="brands-scroll-row"
+             id="brandsScrollRow">
+
+
+            <div class="brand-badge-card brand-kfc"
+                 data-brand="KFC"
+                 role="button"
+                 tabindex="0">
+
+                <div class="brand-avatar-box">
+
+                    <span class="brand-logo-text"
+                          style="color:#e4002b;">
+                        KFC
+                    </span>
+
+                </div>
+
+                <h4 class="brand-card-name">
+                    KFC
+                </h4>
+
+                <p class="brand-card-cat">
+                    Chicken & Buckets
+                </p>
+
+                <span class="brand-action-arrow">
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="brand-badge-card brand-dominos"
+                 data-brand="Domino's Pizza"
+                 role="button"
+                 tabindex="0">
+
+                <div class="brand-avatar-box">
+
+                    <span class="brand-logo-icon">
+                        🍕
+                    </span>
+
+                </div>
+
+                <h4 class="brand-card-name">
+                    Domino's
+                </h4>
+
+                <p class="brand-card-cat">
+                    Pizzas & Cheesy Dips
+                </p>
+
+                <span class="brand-action-arrow">
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="brand-badge-card brand-mcdonalds"
+                 data-brand="McDonald's"
+                 role="button"
+                 tabindex="0">
+
+                <div class="brand-avatar-box">
+
+                    <span class="brand-logo-text"
+                          style="color:#ffbc0d;font-size:26px;font-weight:900;">
+                        M
+                    </span>
+
+                </div>
+
+                <h4 class="brand-card-name">
+                    McDonald's
+                </h4>
+
+                <p class="brand-card-cat">
+                    Burgers & Fries
+                </p>
+
+                <span class="brand-action-arrow">
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="brand-badge-card brand-pizzahut"
+                 data-brand="Pizza Hut"
+                 role="button"
+                 tabindex="0">
+
+                <div class="brand-avatar-box">
+
+                    <span class="brand-logo-icon">
+                        🎩
+                    </span>
+
+                </div>
+
+                <h4 class="brand-card-name">
+                    Pizza Hut
+                </h4>
+
+                <p class="brand-card-cat">
+                    Pan Pizzas & Wings
+                </p>
+
+                <span class="brand-action-arrow">
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="brand-badge-card brand-subway"
+                 data-brand="Subway"
+                 role="button"
+                 tabindex="0">
+
+                <div class="brand-avatar-box">
+
+                    <span class="brand-logo-text"
+                          style="color:#008938;font-size:19px;">
+                        SUB
+                    </span>
+
+                </div>
+
+                <h4 class="brand-card-name">
+                    Subway
+                </h4>
+
+                <p class="brand-card-cat">
+                    Fresh Subs & Salads
+                </p>
+
+                <span class="brand-action-arrow">
+                    →
+                </span>
+
+            </div>
+
+
+            <div class="brand-badge-card brand-burgerking"
+                 data-brand="Burger King"
+                 role="button"
+                 tabindex="0">
+
+                <div class="brand-avatar-box">
+
+                    <span class="brand-logo-icon">
+                        👑
+                    </span>
+
+                </div>
+
+                <h4 class="brand-card-name">
+                    Burger King
+                </h4>
+
+                <p class="brand-card-cat">
+                    Flame-Grilled Whopper
+                </p>
+
+                <span class="brand-action-arrow">
+                    →
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         6. FEATURE STRIP
+         ========================================================= -->
+
+    <section class="feature-strip-section">
+
+        <div class="feature-strip-card">
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon-bubble bubble-green">
+                    <span>🌿</span>
+                </div>
+
+                <div class="feature-text">
+
+                    <h4 class="feature-title">
+                        Fresh & Quality Food
+                    </h4>
+
+                    <p class="feature-desc">
+                        Made with quality ingredients
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature-divider"></div>
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon-bubble bubble-orange">
+                    <span>🛵</span>
+                </div>
+
+                <div class="feature-text">
+
+                    <h4 class="feature-title">
+                        Fast & Reliable Delivery
+                    </h4>
+
+                    <p class="feature-desc">
+                        Hot food straight to your door
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature-divider"></div>
+
+
+            <div class="feature-item">
+
+                <div class="feature-icon-bubble bubble-blue">
+                    <span>🛡</span>
+                </div>
+
+                <div class="feature-text">
+
+                    <h4 class="feature-title">
+                        Secure Payments
+                    </h4>
+
+                    <p class="feature-desc">
+                        Pay safely and easily
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         7. FOOTER
+         ========================================================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-top">
+
+
+                <div class="footer-brand">
+
+                    <div class="footer-logo">
+                        <span>🍊</span> Foodie
+                    </div>
+
+                    <p class="footer-tagline">
+                        Good Food • Happy Mood.
+                        Bringing your favorite flavors straight
+                        from top kitchens to your doorstep.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h4 class="footer-col-title">
+                        Navigation
+                    </h4>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="home.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/JEE/restaurant">
+                                Restaurants
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/JEE/restaurant">
+                                Menu
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="orders.html">
+                                My Orders
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/JEE/cart">
+                                Cart
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h4 class="footer-col-title">
+                        Account
+                    </h4>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="/JEE/login.jsp">
+                                Login
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/JEE/signup.jsp">
+                                Create Account
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="orders.html">
+                                Track Order
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-col">
+
+                    <h4 class="footer-col-title">
+                        Help & Support
+                    </h4>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="mailto:support@foodie.com">
+                                Customer Care
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Terms & Conditions
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Privacy Policy
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Foodie Inc.
+                    All rights reserved.
+                    Made with love for food lovers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Toast -->
+    <div
+        class="toast-notice"
+        id="toastNotice"
+        role="status"
+        aria-live="polite">
+
+        <span id="toastIcon">
+            ✓
+        </span>
+
+        <span id="toastMessage">
+            Success
+        </span>
+
+    </div>
+
+
+    <!-- Home JavaScript -->
+    <script src="js/home.js"></script>
+
+</body>
+
+</html>

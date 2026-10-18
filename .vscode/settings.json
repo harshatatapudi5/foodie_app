@@ -1,0 +1,14 @@
+{
+  "tomcatAutoDeploy.catalinaHome": "D:/SOFTWARE/apache-tomcat-10.1.59-windows-x64/apache-tomcat-10.1.59",
+  "tomcatAutoDeploy.javaHome": "C:/Program Files/Eclipse Adoptium/jdk-25.0.4.101-hotspot",
+  "tomcatAutoDeploy.port": 8080,
+  "tomcatAutoDeploy.contextPath": "/JEE",
+  "tomcatAutoDeploy.javaSourceRoot": "src/main/java",
+  "tomcatAutoDeploy.webContentRoot": "src/main/webapp",
+  "tomcatAutoDeploy.resourceRoot": "src/main/resources",
+  "tomcatAutoDeploy.classpath": [
+    "src/main/webapp/WEB-INF/lib/mysql-connector-j-9.2.0.jar",
+    "src/main/webapp/WEB-INF/lib/jbcrypt-0.4.jar"
+  ],
+  "tomcatAutoDeploy.javaOpts": "-Dfile.encoding=UTF-8"
+}

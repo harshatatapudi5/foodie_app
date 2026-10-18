@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Foodie</title>
+    <!-- Separate Menu Stylesheet -->
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+    <!-- ===================================================
+         1. NAVBAR / HEADER
+         =================================================== -->
+    <header class="header-navbar">
+        <div class="nav-container">
+            <!-- Brand Logo -->
+            <div class="brand-group">
+                <a href="home.html" class="brand-logo" aria-label="Foodie Home">
+                    🍔 Foodie
+                </a>
+                <span class="brand-tagline">Delicious food, delivered to you.</span>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="home.html" class="nav-link">Home</a></li>
+                    <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+                    <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                    <li><a href="orders.html" class="nav-link">Orders</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right Actions: Cart & Login -->
+            <div class="nav-actions">
+                <!-- Cart Button (Links to cart.html) -->
+                <a href="cart.html" class="cart-btn-link" aria-label="View Cart">
+                    🛒 Cart
+                </a>
+                <a href="login.html" class="nav-login-link">
+                    Login
+                </a>
+                <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================================
+         2. RESTAURANT INFORMATION HEADER
+         Populated dynamically from JavaScript data
+         =================================================== -->
+    <section class="restaurant-header-section">
+        <div class="restaurant-hero-card" id="restaurantHeroCard">
+            <div class="restaurant-cover-wrap">
+                <img 
+                    id="restaurantCoverImg" 
+                    src="images/menu/spice-garden-banner.jpg" 
+                    alt="Restaurant Banner" 
+                    class="restaurant-cover-img"
+                    onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200&q=80'"
+                >
+            </div>
+            <div class="restaurant-info-wrap">
+                <h1 class="restaurant-name" id="restaurantName">Spice Garden</h1>
+                <p class="restaurant-cuisines" id="restaurantCuisines">Indian • Biryani • North Indian</p>
+                <div class="restaurant-meta-pills">
+                    <span class="meta-pill rating" id="restaurantRating">⭐ 4.6</span>
+                    <span class="meta-pill time" id="restaurantDeliveryTime">🕒 30–35 mins</span>
+                    <span class="meta-pill delivery">🛵 Doorstep Delivery</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================
+         3. MENU CONTROLS (SEARCH, SORT & CATEGORIES)
+         =================================================== -->
+    <section class="menu-controls-wrapper">
+        <!-- Search and Sort Bar -->
+        <div class="search-sort-row">
+            <!-- Search Dishes Input -->
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input 
+                    type="text" 
+                    id="foodSearchInput" 
+                    class="search-input" 
+                    placeholder="Search for dishes..." 
+                    aria-label="Search for dishes"
+                >
+            </div>
+
+            <!-- Sorting Dropdown -->
+            <div class="sort-box">
+                <label for="foodSortSelect" class="sort-label">Sort By:</label>
+                <select id="foodSortSelect" class="sort-select" aria-label="Sort dishes">
+                    <option value="recommended">Recommended</option>
+                    <option value="price-low-high">Price: Low to High</option>
+                    <option value="price-high-low">Price: High to Low</option>
+                    <option value="rating">Rating</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Food Category Buttons Bar -->
+        <div class="category-filter-bar" id="categoryFilterBar" role="tablist">
+            <button class="btn-category active" data-category="All" role="tab">All</button>
+            <button class="btn-category" data-category="Breakfast" role="tab">Breakfast</button>
+            <button class="btn-category" data-category="Biryani" role="tab">Biryani</button>
+            <button class="btn-category" data-category="Main Course" role="tab">Main Course</button>
+            <button class="btn-category" data-category="Chinese" role="tab">Chinese</button>
+            <button class="btn-category" data-category="Pizza" role="tab">Pizza</button>
+            <button class="btn-category" data-category="Burgers" role="tab">Burgers</button>
+            <button class="btn-category" data-category="Snacks" role="tab">Snacks</button>
+            <button class="btn-category" data-category="Beverages" role="tab">Beverages</button>
+            <button class="btn-category" data-category="Desserts" role="tab">Desserts</button>
+        </div>
+
+        <!-- Results Counter and Heading -->
+        <div class="results-status-bar">
+            <h2 class="results-heading" id="resultsCategoryTitle">All Dishes</h2>
+            <span class="results-count" id="resultsCount">Showing 15 dishes</span>
+        </div>
+
+        <!-- ===============================================
+             4. DYNAMIC FOOD MENU ITEMS GRID
+             Cards are dynamically rendered by js/menu.js
+             =============================================== -->
+        <div class="menu-items-grid" id="menuItemsGrid">
+            <!-- Populated via displayMenu() in js/menu.js -->
+        </div>
+    </section>
+
+    <!-- ===================================================
+         5. FOOTER
+         =================================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo">🍔 Foodie</div>
+            <p class="footer-tagline">Delicious food, delivered to you. Fast, hot & fresh.</p>
+            <ul class="footer-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <p class="footer-copy">© 2026 Foodie Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ===================================================
+         6. FLOATING ADD TO CART NOTIFICATION TOAST
+         =================================================== -->
+    <div class="toast-notice" id="toastNotice" role="status" aria-live="polite"></div>
+
+    <!-- Separate Menu JavaScript File -->
+    <script src="js/menu.js"></script>
+</body>
+</html>
+

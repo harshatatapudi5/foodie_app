@@ -1,0 +1,997 @@
+/* ===================================================
+   FOODIE - PAYMENT / CHECKOUT STYLESHEET (css/payment.css)
+   Clean, modern, responsive food delivery checkout UI
+   Warm orange accents, address cards, payment selectors
+   =================================================== */
+
+:root {
+    /* Brand Color Palette */
+    --primary-orange: #ff6b35;
+    --primary-hover: #fa521c;
+    --primary-light: #fff5f0;
+    --primary-glow: rgba(255, 107, 53, 0.22);
+    --accent-red: #e23744;
+    --veg-color: #2e7d32;
+    --veg-bg: #e8f5e9;
+    --nonveg-color: #c62828;
+    --nonveg-bg: #ffebee;
+    --text-main: #1e2022;
+    --text-muted: #667085;
+    --text-light: #98a2b3;
+    --bg-page: #fdfbf7;
+    --bg-card: #ffffff;
+    --border-color: #f0ebe4;
+    --border-focus: #ff6b35;
+    
+    /* Radii & Shadows */
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 18px;
+    --radius-full: 9999px;
+    --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.04);
+    --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 14px 28px rgba(255, 107, 53, 0.12);
+    --shadow-modal: 0 20px 50px rgba(0, 0, 0, 0.25);
+    
+    /* Layout */
+    --max-width: 1200px;
+    --nav-height: 74px;
+    --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-page);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* ===================================================
+   1. NAVBAR
+   =================================================== */
+.header-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: var(--nav-height);
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary-orange);
+    letter-spacing: -0.5px;
+    transition: var(--transition);
+}
+
+.brand-logo:hover {
+    transform: scale(1.02);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-link {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--text-muted);
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary-orange);
+    background-color: var(--primary-light);
+}
+
+/* Search bar in Navbar */
+.nav-search-box {
+    flex: 1;
+    max-width: 280px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-search-icon {
+    position: absolute;
+    left: 12px;
+    font-size: 14px;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+.nav-search-input {
+    width: 100%;
+    height: 40px;
+    padding: 8px 12px 8px 36px;
+    font-size: 13.5px;
+    background: #f8f9fa;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-full);
+    outline: none;
+    transition: var(--transition);
+}
+
+.nav-search-input:focus {
+    background: #ffffff;
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.cart-nav-badge-btn {
+    background-color: var(--primary-orange);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    font-size: 13.5px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+    transition: var(--transition);
+}
+
+.cart-nav-badge-btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.nav-login-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+    padding: 7px 14px;
+    border-radius: var(--radius-full);
+    border: 1.5px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.nav-login-link:hover {
+    border-color: var(--primary-orange);
+    color: var(--primary-orange);
+    background-color: var(--primary-light);
+}
+
+.mobile-toggle-btn {
+    display: none;
+    background: none;
+    font-size: 24px;
+    color: var(--text-main);
+    padding: 4px;
+}
+
+/* ===================================================
+   2. CHECKOUT HEADER / BANNER
+   =================================================== */
+.checkout-banner-section {
+    position: relative;
+    background: linear-gradient(135deg, #2b1f1a 0%, #1c1c1c 100%);
+    color: #ffffff;
+    padding: 36px 24px;
+    overflow: hidden;
+}
+
+.checkout-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 85% 40%, rgba(255, 107, 53, 0.28) 0%, transparent 60%),
+                linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 100%);
+    z-index: 1;
+}
+
+.checkout-banner-container {
+    position: relative;
+    z-index: 2;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.btn-back-cart {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 8px 18px;
+    border-radius: var(--radius-full);
+    font-size: 13.5px;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+    transition: var(--transition);
+}
+
+.btn-back-cart:hover {
+    background: var(--primary-orange);
+    border-color: var(--primary-orange);
+    transform: translateX(-3px);
+}
+
+.checkout-banner-title {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+.checkout-banner-subtitle {
+    font-size: 14.5px;
+    color: #ffd8c4;
+    font-weight: 500;
+}
+
+/* ===================================================
+   3. CHECKOUT LAYOUT GRID
+   =================================================== */
+.checkout-wrapper {
+    max-width: var(--max-width);
+    margin: 36px auto;
+    padding: 0 24px;
+}
+
+.checkout-layout-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 32px;
+    align-items: start;
+}
+
+/* Left & Right Columns */
+.checkout-left-col,
+.checkout-right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Cards */
+.checkout-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.checkout-card:hover {
+    border-color: rgba(255, 107, 53, 0.25);
+}
+
+.card-step-title {
+    font-size: 19px;
+    font-weight: 800;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 22px;
+}
+
+.step-badge {
+    background: var(--primary-light);
+    color: var(--primary-orange);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* ===================================================
+   4. DELIVERY ADDRESS FORM
+   =================================================== */
+.address-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group-full {
+    grid-column: 1 / -1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.required-star {
+    color: var(--accent-red);
+}
+
+.form-control {
+    height: 46px;
+    padding: 10px 14px;
+    font-size: 14px;
+    color: var(--text-main);
+    background-color: #ffffff;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-control::placeholder {
+    color: var(--text-light);
+    font-size: 13.5px;
+}
+
+.form-control:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.form-control.has-error {
+    border-color: var(--accent-red);
+    background-color: var(--nonveg-bg);
+}
+
+textarea.form-control {
+    height: 80px;
+    resize: vertical;
+}
+
+/* Field Error Text */
+.field-error-text {
+    color: var(--accent-red);
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+    display: none;
+}
+
+.field-error-text.visible {
+    display: block;
+}
+
+/* Save Address Checkbox */
+.save-address-row {
+    grid-column: 1 / -1;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.save-address-row input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-orange);
+    cursor: pointer;
+}
+
+.save-address-label {
+    font-size: 13.5px;
+    color: var(--text-main);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* ===================================================
+   5. PAYMENT METHOD SELECTION
+   =================================================== */
+.payment-methods-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.payment-option {
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 16px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+    background: #ffffff;
+}
+
+.payment-option:hover {
+    border-color: rgba(255, 107, 53, 0.4);
+    background: #fffcf9;
+}
+
+.payment-option.selected {
+    border-color: var(--primary-orange);
+    background-color: #fff9f5;
+    box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.payment-radio {
+    margin-top: 3px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-orange);
+    cursor: pointer;
+}
+
+.payment-details {
+    flex: 1;
+}
+
+.payment-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 2px;
+}
+
+.payment-icon {
+    font-size: 18px;
+}
+
+.payment-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* ===================================================
+   6. PLACE ORDER BUTTON
+   =================================================== */
+.btn-place-order {
+    width: 100%;
+    height: 54px;
+    background: var(--primary-orange);
+    color: #ffffff;
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.38);
+    transition: var(--transition);
+    margin-top: 10px;
+}
+
+.btn-place-order:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(255, 107, 53, 0.45);
+}
+
+.btn-place-order:active {
+    transform: translateY(0);
+}
+
+/* ===================================================
+   7. ORDER SUMMARY (RIGHT SIDE)
+   =================================================== */
+.order-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-height: 320px;
+    overflow-y: auto;
+    padding-right: 4px;
+    margin-bottom: 18px;
+}
+
+.order-item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.order-item-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.order-item-thumb {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background: #f3f4f6;
+    flex-shrink: 0;
+}
+
+.order-item-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.order-item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-item-title-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.order-item-calc {
+    font-size: 12.5px;
+    color: var(--text-muted);
+}
+
+.order-item-total {
+    font-size: 14.5px;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+/* Price Details Card */
+.price-summary-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14.5px;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+}
+
+.price-row.discount-row {
+    color: var(--veg-color);
+    font-weight: 700;
+}
+
+.price-row-val {
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.price-row.discount-row .price-row-val {
+    color: var(--veg-color);
+}
+
+.price-divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 16px 0;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 6px;
+}
+
+.total-val {
+    color: var(--primary-orange);
+    font-size: 22px;
+}
+
+/* ===================================================
+   8. ORDER SUCCESS MODAL
+   =================================================== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-overlay.active {
+    display: flex;
+    animation: fadeIn 0.25s ease-out;
+}
+
+.success-card {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    max-width: 480px;
+    width: 100%;
+    padding: 40px 32px;
+    text-align: center;
+    box-shadow: var(--shadow-modal);
+    animation: scaleUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.success-icon-circle {
+    width: 76px;
+    height: 76px;
+    background: #e8f5e9;
+    color: var(--veg-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    font-weight: 900;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 14px rgba(46, 125, 50, 0.2);
+}
+
+.success-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 6px;
+}
+
+.success-subtitle {
+    font-size: 14.5px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.order-id-box {
+    background: var(--primary-light);
+    border: 1.5px dashed rgba(255, 107, 53, 0.4);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.order-id-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.order-id-code {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--primary-orange);
+    margin: 4px 0 8px;
+}
+
+.order-est-time {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.btn-continue-shopping {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 48px;
+    background: var(--primary-orange);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+}
+
+.btn-continue-shopping:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+/* ===================================================
+   9. EMPTY CART CHECKOUT VIEW
+   =================================================== */
+.empty-checkout-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    max-width: 540px;
+    margin: 60px auto;
+    padding: 70px 24px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.empty-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.empty-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.empty-subtext {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 26px;
+    line-height: 1.5;
+}
+
+.btn-browse-menu {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary-orange);
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: var(--radius-full);
+    font-size: 14.5px;
+    font-weight: 700;
+    transition: var(--transition);
+    box-shadow: 0 4px 14px rgba(255, 107, 53, 0.35);
+}
+
+.btn-browse-menu:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+/* ===================================================
+   10. BENEFITS SECTION
+   =================================================== */
+.benefits-section {
+    max-width: var(--max-width);
+    margin: 60px auto 30px;
+    padding: 0 24px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.benefit-box {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px;
+}
+
+.benefit-box-icon {
+    font-size: 28px;
+    background: var(--primary-light);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.benefit-box-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 2px;
+}
+
+.benefit-box-sub {
+    font-size: 12.5px;
+    color: var(--text-muted);
+}
+
+/* ===================================================
+   11. FOOTER
+   =================================================== */
+.site-footer {
+    background: #1c1c1c;
+    color: #ffffff;
+    margin-top: 60px;
+    padding: 50px 24px 30px;
+    border-top: 1px solid #2d2d2d;
+}
+
+.footer-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+}
+
+.footer-logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--primary-orange);
+}
+
+.footer-tagline {
+    color: #9e9e9e;
+    font-size: 14px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 8px 0;
+}
+
+.footer-links a {
+    color: #d1d5db;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--primary-orange);
+}
+
+.footer-copy {
+    color: #6b7280;
+    font-size: 13px;
+    border-top: 1px solid #2e2e2e;
+    width: 100%;
+    padding-top: 20px;
+}
+
+/* ===================================================
+   12. ANIMATIONS & RESPONSIVE
+   =================================================== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 992px) {
+    .checkout-layout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-toggle-btn {
+        display: block;
+    }
+
+    .nav-search-box {
+        display: none;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 24px;
+        gap: 16px;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        display: none;
+    }
+
+    .nav-links.show-mobile {
+        display: flex;
+    }
+
+    .address-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-card {
+        padding: 20px 16px;
+    }
+}

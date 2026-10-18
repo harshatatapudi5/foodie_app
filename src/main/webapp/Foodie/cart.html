@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Foodie</title>
+    <!-- Separate Cart Stylesheet -->
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+<body>
+
+    <!-- ===================================================
+         1. NAVBAR / HEADER
+         =================================================== -->
+    <header class="header-navbar">
+        <div class="nav-container">
+            <!-- Brand Logo -->
+            <div class="brand-group">
+                <a href="home.html" class="brand-logo" aria-label="Foodie Home">
+                    🍊 Foodie
+                </a>
+                <span class="brand-tagline">Delicious food, delivered to you.</span>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="home.html" class="nav-link">Home</a></li>
+                    <li><a href="restaurants.html" class="nav-link">Restaurants</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="orders.html" class="nav-link">Orders</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right Actions: Cart Count Badge & Login -->
+            <div class="nav-actions">
+                <!-- Cart Button showing total quantity across items e.g. Cart (6) -->
+                <a href="cart.html" class="cart-nav-badge-btn" id="navCartCount" aria-label="Cart Items">
+                    🛒 Cart (0)
+                </a>
+                <a href="login.html" class="nav-login-link">
+                    👤 Login
+                </a>
+                <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================================================
+         2. CART HEADER / BANNER
+         =================================================== -->
+    <section class="cart-banner-section">
+        <div class="cart-banner-overlay"></div>
+        <div class="cart-banner-container">
+            <h1 class="cart-banner-title">Your Cart</h1>
+            <p class="cart-banner-subtitle">Delicious food is just a step away!</p>
+        </div>
+    </section>
+
+    <!-- ===================================================
+         3. MAIN CART SECTION
+         =================================================== -->
+    <main class="cart-wrapper">
+
+        <!-- A. ACTIVE CART TWO-COLUMN LAYOUT -->
+        <div class="cart-layout-grid" id="cartMainGrid">
+
+            <!-- Left Column: Cart Items List + Coupon Code -->
+            <div class="cart-left-col">
+                <div class="cart-items-header">
+                    <h2 class="cart-items-title" id="cartItemsHeading">Cart Items (0)</h2>
+                    <span class="cart-items-count-badge" id="cartItemsCountBadge">0 total items</span>
+                </div>
+
+                <!-- Dynamically Populated Cart Items Cards -->
+                <div class="cart-items-container" id="cartItemsContainer">
+                    <!-- Populated via js/cart.js -->
+                </div>
+
+                <!-- Coupon Section -->
+                <div class="coupon-card">
+                    <h3 class="coupon-title">🎟 Apply Coupon Code</h3>
+                    <div class="coupon-input-group">
+                        <input 
+                            type="text" 
+                            id="couponInput" 
+                            class="coupon-input" 
+                            placeholder="Enter coupon code (e.g. FOOD50)"
+                            aria-label="Coupon code"
+                        >
+                        <button class="btn-apply-coupon" id="btnApplyCoupon">Apply</button>
+                    </div>
+                    <div id="couponFeedback" class="coupon-feedback" role="alert"></div>
+                </div>
+            </div>
+
+            <!-- Right Column: Sticky Price Details Card -->
+            <aside class="cart-right-col">
+                <div class="price-details-card">
+                    <h3 class="price-details-title">Price Details</h3>
+
+                    <!-- Item Total Row -->
+                    <div class="price-row">
+                        <span>Item Total</span>
+                        <span class="price-row-value" id="summaryItemTotal">₹0</span>
+                    </div>
+
+                    <!-- Delivery Fee Row -->
+                    <div class="price-row">
+                        <span>Delivery Fee</span>
+                        <span class="price-row-value" id="summaryDeliveryFee">₹40</span>
+                    </div>
+
+                    <!-- Discount Row (Visible only when coupon is applied) -->
+                    <div class="price-row discount-row" id="summaryDiscountRow" style="display: none;">
+                        <span>Coupon Discount (FOOD50)</span>
+                        <span class="price-row-value" id="summaryDiscount">-₹50</span>
+                    </div>
+
+                    <div class="price-divider"></div>
+
+                    <!-- Final Total Row -->
+                    <div class="total-row">
+                        <span>Total</span>
+                        <span class="total-amount" id="summaryFinalTotal">₹0</span>
+                    </div>
+
+                    <!-- Proceed to Checkout Button -->
+                    <a href="payment.html" class="btn-checkout" id="btnCheckout">
+                        Proceed to Checkout →
+                    </a>
+
+                    <div class="checkout-trust-note">
+                        <span>🛡 100% Safe & Secure Checkout</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- B. EMPTY CART VIEW (Shown when all items are removed) -->
+        <div class="empty-cart-view" id="emptyCartContainer" style="display: none;">
+            <div class="empty-cart-icon">🛒</div>
+            <h2 class="empty-cart-heading">Your Cart is Empty</h2>
+            <p class="empty-cart-subtext">
+                Looks like you haven't added anything to your cart yet.<br>
+                Explore our mouth-watering dishes and add your favorites!
+            </p>
+            <a href="menu.html" class="btn-browse-menu">
+                🍽 Browse Menu
+            </a>
+        </div>
+
+    </main>
+
+    <!-- ===================================================
+         4. BOTTOM BENEFITS SECTION
+         =================================================== -->
+    <section class="benefits-section">
+        <div class="benefits-grid">
+            <div class="benefit-box">
+                <div class="benefit-box-icon">🌿</div>
+                <div>
+                    <h4 class="benefit-box-title">Fresh & Tasty Food</h4>
+                    <p class="benefit-box-sub">Prepared with pure, hand-picked ingredients</p>
+                </div>
+            </div>
+            <div class="benefit-box">
+                <div class="benefit-box-icon">🚚</div>
+                <div>
+                    <h4 class="benefit-box-title">Fast Delivery</h4>
+                    <p class="benefit-box-sub">Hot & fresh doorstep delivery in 30–40 mins</p>
+                </div>
+            </div>
+            <div class="benefit-box">
+                <div class="benefit-box-icon">🛡</div>
+                <div>
+                    <h4 class="benefit-box-title">Secure Payments</h4>
+                    <p class="benefit-box-sub">End-to-end encrypted & verified transactions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================================================
+         5. FOOTER
+         =================================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-logo">🍊 Foodie</div>
+            <p class="footer-tagline">Delicious food, delivered to you. Fast, hot & fresh.</p>
+            <ul class="footer-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <p class="footer-copy">© 2026 Foodie Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Toast Notification -->
+    <div class="toast-notice" id="toastNotice" role="status" aria-live="polite"></div>
+
+    <!-- Separate Cart JavaScript File -->
+    <script src="js/cart.js"></script>
+</body>
+</html>
+
