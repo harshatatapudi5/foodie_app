@@ -1,0 +1,18 @@
+# Build and compiled classes
+build/
+bin/
+*.class
+src/main/webapp/WEB-INF/classes/
+
+# Local Tomcat Server & Deployments
+.vscode/tomcat/
+
+# Logs and temporary files
+*.log
+temp/
+logs/
+.system_generated/
+
+# OS generated files
+.DS_Store
+Thumbs.db
