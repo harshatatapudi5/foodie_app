@@ -20,7 +20,7 @@ Foodie is a full-stack Java / Jakarta EE web application for online food deliver
 
 ## 🛠️ Tech Stack
 
-- **Backend**: Java 25, Jakarta EE (Servlets, JSP, JSTL)
+- **Backend**: Java 25, Jakarta EE (Servlets, JSP)
 - **Database**: MySQL (`food_app`), JDBC
 - **Server**: Apache Tomcat 10.1.x
 - **Frontend**: HTML5, CSS3 (Aurora Glassmorphism tokens), Vanilla JavaScript
@@ -40,7 +40,7 @@ Foodie is a full-stack Java / Jakarta EE web application for online food deliver
 2. Configure credentials in `src/main/java/com/tap/util/DBConnection.java`.
 
 ### Build & Run
-Compile Java sources and run with Tomcat:
+Compile Java sources and sync to Tomcat:
 ```powershell
 powershell -ExecutionPolicy Bypass -File build.ps1
 ```
