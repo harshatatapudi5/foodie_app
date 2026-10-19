@@ -157,6 +157,8 @@ Install the following software before running the application:
      
 ##  📸 Application Screenshots
 
+    <img width="1637" height="1090" alt="image" src="https://github.com/user-attachments/assets/b1e1beb6-21b2-4579-ada7-9f18831de3bc" />
+
 
 
 
