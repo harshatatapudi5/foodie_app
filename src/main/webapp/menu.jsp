@@ -289,11 +289,22 @@
                             // Check if already in cart
                             CartItem existingItem = (cartMap != null) ? cartMap.get(m.getId()) : null;
                             int inCartQty = (existingItem != null) ? existingItem.getQuantity() : 0;
+                            String itemDesc = (m.getDesc() != null && !m.getDesc().trim().isEmpty()) 
+                                ? m.getDesc() 
+                                : "Prepared fresh with signature authentic spices and premium ingredients.";
                     %>
                         <div class="food-card" 
-                             data-name="<%= (m.getItemName() != null ? m.getItemName().toLowerCase() : "") %>"
+                             data-id="<%= m.getId() %>"
+                             data-name="<%= m.getItemName() %>"
+                             data-desc="<%= itemDesc %>"
+                             data-price="<%= String.format(java.util.Locale.US, "%.2f", m.getPrice()) %>"
                              data-category="<%= itemCat %>"
-                             data-veg="<%= isNonVeg ? "non-veg" : "veg" %>">
+                             data-veg="<%= isNonVeg ? "non-veg" : "veg" %>"
+                             data-image="<%= foodImageUrl %>"
+                             data-available="<%= isAvailable %>"
+                             data-restaurant="<%= resName %>"
+                             data-resid="<%= resId %>"
+                             data-context-path="<%= request.getContextPath() %>">
                             
                             <div class="food-card-left">
                                 <div style="display: flex; align-items: center; gap: 8px;">
@@ -571,7 +582,7 @@
             let visibleCount = 0;
 
             cards.forEach(card => {
-                const name = card.getAttribute('data-name') || '';
+                const name = (card.getAttribute('data-name') || '').toLowerCase();
                 const cat = card.getAttribute('data-category') || '';
                 const vegType = card.getAttribute('data-veg') || '';
 

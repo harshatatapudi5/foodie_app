@@ -636,11 +636,88 @@
             <!-- Right Hero Visual with Aurora Glow & Floating Glass Card -->
             <div class="hero-image-wrap">
                 <div class="hero-glow-circle"></div>
-                <div class="hero-main-img-box">
-                    <img src="<%= request.getContextPath() %>/Foodie/images/hero/hero-biryani.jpg" 
-                         alt="Delicious Biryani" 
-                         class="hero-main-img"
-                         onerror="this.src='<%= request.getContextPath() %>/Foodie/images/menu/chicken-biryani.jpg';">
+                <div class="hero-carousel-container" id="heroFoodCarousel" tabindex="0" role="region" aria-label="Featured Food Carousel">
+                    <div class="hero-carousel-track">
+                        <!-- Slide 1: Biryani -->
+                        <div class="hero-carousel-slide active" aria-hidden="false">
+                            <img src="<%= request.getContextPath() %>/Foodie/images/hero/hero-biryani.jpg" 
+                                 alt="Royal Hyderabadi Biryani" 
+                                 onerror="this.src='<%= request.getContextPath() %>/Foodie/images/menu/chicken-biryani.jpg';">
+                            <div class="hero-carousel-caption">
+                                <span class="hero-slide-badge">Bestseller</span>
+                                <span class="hero-slide-title">Royal Hyderabadi Dum Biryani</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: Pizza -->
+                        <div class="hero-carousel-slide" aria-hidden="true">
+                            <img src="<%= request.getContextPath() %>/Foodie/images/dominos/dominos-farmhouse.jpg" 
+                                 alt="Italian Handcrafted Pizza" 
+                                 onerror="this.src='<%= request.getContextPath() %>/Foodie/images/menu/pizza.jpg';">
+                            <div class="hero-carousel-caption">
+                                <span class="hero-slide-badge">Woodfired</span>
+                                <span class="hero-slide-title">Artisan Farmhouse Cheesy Pizza</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: Burgers -->
+                        <div class="hero-carousel-slide" aria-hidden="true">
+                            <img src="<%= request.getContextPath() %>/Foodie/images/burgerking/bk-whopper.jpg" 
+                                 alt="Flame-Grilled Whopper Burger" 
+                                 onerror="this.src='<%= request.getContextPath() %>/Foodie/images/menu/burger.jpg';">
+                            <div class="hero-carousel-caption">
+                                <span class="hero-slide-badge">Gourmet</span>
+                                <span class="hero-slide-title">Flame-Grilled Signature Burgers</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 4: Fried Chicken -->
+                        <div class="hero-carousel-slide" aria-hidden="true">
+                            <img src="<%= request.getContextPath() %>/Foodie/images/kfc/kfc-popcorn-chicken.jpg" 
+                                 alt="Crispy Fried Chicken" 
+                                 onerror="this.src='<%= request.getContextPath() %>/Foodie/images/menu/chicken-biryani.jpg';">
+                            <div class="hero-carousel-caption">
+                                <span class="hero-slide-badge">Extra Crunchy</span>
+                                <span class="hero-slide-title">Crispy Hot &amp; Spicy Fried Chicken</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 5: Desserts -->
+                        <div class="hero-carousel-slide" aria-hidden="true">
+                            <img src="<%= request.getContextPath() %>/Foodie/images/dessertfactory/df-chocolate-lava-cake.jpg" 
+                                 alt="Warm Chocolate Lava Cake" 
+                                 onerror="this.src='<%= request.getContextPath() %>/Foodie/images/menu/pizza.jpg';">
+                            <div class="hero-carousel-caption">
+                                <span class="hero-slide-badge">Decadent</span>
+                                <span class="hero-slide-title">Warm Molten Lava Cakes &amp; Sweets</span>
+                            </div>
+                        </div>
+
+                        <!-- Slide 6: Healthy Food -->
+                        <div class="hero-carousel-slide" aria-hidden="true">
+                            <img src="<%= request.getContextPath() %>/Foodie/images/subway/subway-veggie-delite.jpg" 
+                                 alt="Fresh Healthy Subs & Bowls" 
+                                 onerror="this.src='<%= request.getContextPath() %>/Foodie/images/menu/burger.jpg';">
+                            <div class="hero-carousel-caption">
+                                <span class="hero-slide-badge">Fresh &amp; Nutritious</span>
+                                <span class="hero-slide-title">Wholesome Subs &amp; Garden Bowls</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Arrow Controls -->
+                    <button type="button" class="hero-carousel-arrow prev" aria-label="Previous slide">&#10094;</button>
+                    <button type="button" class="hero-carousel-arrow next" aria-label="Next slide">&#10095;</button>
+
+                    <!-- Indicators Dots -->
+                    <div class="hero-carousel-dots" role="tablist" aria-label="Food slide indicators">
+                        <button type="button" class="hero-carousel-dot active" aria-label="Slide 1" aria-selected="true"></button>
+                        <button type="button" class="hero-carousel-dot" aria-label="Slide 2" aria-selected="false"></button>
+                        <button type="button" class="hero-carousel-dot" aria-label="Slide 3" aria-selected="false"></button>
+                        <button type="button" class="hero-carousel-dot" aria-label="Slide 4" aria-selected="false"></button>
+                        <button type="button" class="hero-carousel-dot" aria-label="Slide 5" aria-selected="false"></button>
+                        <button type="button" class="hero-carousel-dot" aria-label="Slide 6" aria-selected="false"></button>
+                    </div>
                 </div>
 
                 <!-- Floating Frosted Glass Card -->
@@ -672,7 +749,15 @@
         </div>
 
         <div class="category-grid">
-            <a href="<%= request.getContextPath() %>/restaurant?cuisine=Biryani" class="category-card">
+            <a href="<%= request.getContextPath() %>/restaurant?cuisine=Biryani" 
+               class="category-card"
+               data-open-modal="category"
+               data-name="Biryani"
+               data-count="120+ options"
+               data-image="<%= request.getContextPath() %>/Foodie/images/hero/hero-biryani.jpg"
+               data-desc="Indulge in royal dum biryanis, aromatic long-grain basmati, and fragrant royal spices slow-cooked to perfection."
+               data-dishes="Hyderabadi Dum Biryani, Awadhi Gosht Biryani, Paneer Tikka Biryani, Chicken Dum Biryani"
+               data-context-path="<%= request.getContextPath() %>">
                 <div class="category-thumb-box">
                     <img src="<%= request.getContextPath() %>/Foodie/images/categories/biryani.svg" alt="Biryani">
                 </div>
@@ -680,7 +765,15 @@
                 <div class="category-count">120+ options</div>
             </a>
 
-            <a href="<%= request.getContextPath() %>/restaurant?cuisine=Pizza" class="category-card">
+            <a href="<%= request.getContextPath() %>/restaurant?cuisine=Pizza" 
+               class="category-card"
+               data-open-modal="category"
+               data-name="Pizza"
+               data-count="95+ options"
+               data-image="<%= request.getContextPath() %>/Foodie/images/dominos/dominos-farmhouse.jpg"
+               data-desc="Handcrafted stone-baked pizzas loaded with gooey mozzarella, fresh Italian marinara, and garden-fresh herbs."
+               data-dishes="Margherita, Farmhouse Special, Peppy Paneer, Fiery Chicken Feast"
+               data-context-path="<%= request.getContextPath() %>">
                 <div class="category-thumb-box">
                     <img src="<%= request.getContextPath() %>/Foodie/images/categories/pizza.svg" alt="Pizza">
                 </div>
@@ -688,7 +781,15 @@
                 <div class="category-count">95+ options</div>
             </a>
 
-            <a href="<%= request.getContextPath() %>/restaurant?cuisine=Burgers" class="category-card">
+            <a href="<%= request.getContextPath() %>/restaurant?cuisine=Burgers" 
+               class="category-card"
+               data-open-modal="category"
+               data-name="Burgers"
+               data-count="85+ options"
+               data-image="<%= request.getContextPath() %>/Foodie/images/burgerking/bk-whopper.jpg"
+               data-desc="Juicy flame-grilled patties layered with melted cheddar, crisp lettuce, and signature secret sauces inside toasted brioche."
+               data-dishes="Classic Whopper, Crispy Veggie Supreme, Double Bacon Cheeseburger, Paneer Crunch"
+               data-context-path="<%= request.getContextPath() %>">
                 <div class="category-thumb-box">
                     <img src="<%= request.getContextPath() %>/Foodie/images/categories/burgers.svg" alt="Burgers">
                 </div>
@@ -696,7 +797,15 @@
                 <div class="category-count">85+ options</div>
             </a>
 
-            <a href="<%= request.getContextPath() %>/restaurant?cuisine=Chinese" class="category-card">
+            <a href="<%= request.getContextPath() %>/restaurant?cuisine=Chinese" 
+               class="category-card"
+               data-open-modal="category"
+               data-name="Chinese"
+               data-count="75+ options"
+               data-image="<%= request.getContextPath() %>/Foodie/images/menu/chicken-biryani.jpg"
+               data-desc="Wok-tossed delicacies featuring sizzling Hakka noodles, golden spring rolls, Manchurian, and authentic Sichuan spices."
+               data-dishes="Veg Hakka Noodles, Chicken Fried Rice, Chili Paneer Gravy, Crispy Spring Rolls"
+               data-context-path="<%= request.getContextPath() %>">
                 <div class="category-thumb-box">
                     <img src="<%= request.getContextPath() %>/Foodie/images/categories/chinese.svg" alt="Chinese">
                 </div>
@@ -704,7 +813,15 @@
                 <div class="category-count">75+ options</div>
             </a>
 
-            <a href="<%= request.getContextPath() %>/restaurant?cuisine=Desserts" class="category-card">
+            <a href="<%= request.getContextPath() %>/restaurant?cuisine=Desserts" 
+               class="category-card"
+               data-open-modal="category"
+               data-name="Desserts"
+               data-count="60+ options"
+               data-image="<%= request.getContextPath() %>/Foodie/images/dessertfactory/df-chocolate-lava-cake.jpg"
+               data-desc="Sweet temptations including warm molten lava cakes, artisan pastries, traditional Indian sweets, and creamy gelato."
+               data-dishes="Choco Lava Cake, Red Velvet Pastry, Gulab Jamun Sundae, Belgian Waffles"
+               data-context-path="<%= request.getContextPath() %>">
                 <div class="category-thumb-box">
                     <img src="<%= request.getContextPath() %>/Foodie/images/categories/desserts.svg" alt="Desserts">
                 </div>
@@ -712,7 +829,15 @@
                 <div class="category-count">60+ options</div>
             </a>
 
-            <a href="<%= request.getContextPath() %>/restaurant?cuisine=Healthy" class="category-card">
+            <a href="<%= request.getContextPath() %>/restaurant?cuisine=Healthy" 
+               class="category-card"
+               data-open-modal="category"
+               data-name="Healthy"
+               data-count="50+ options"
+               data-image="<%= request.getContextPath() %>/Foodie/images/subway/subway-veggie-delite.jpg"
+               data-desc="Nutrient-dense harvest bowls, keto wraps, fresh sub sandwiches, and organic cold-pressed juices."
+               data-dishes="Veggie Delite Sub, Quinoa Avocado Bowl, Grilled Chicken Salad, Fresh Fruit Parfait"
+               data-context-path="<%= request.getContextPath() %>">
                 <div class="category-thumb-box">
                     <img src="<%= request.getContextPath() %>/Foodie/images/categories/sandwiches.svg" alt="Healthy Food">
                 </div>
@@ -754,7 +879,19 @@
                     String discount = (r.getId() % 2 == 0) ? "40% OFF" : "30% OFF";
                     String delTime = (r.getDelTime() != null && !r.getDelTime().isEmpty()) ? r.getDelTime() : "30-40 mins";
             %>
-                <div class="res-card" data-cuisine="<%= r.getCuisineType() %>">
+                <div class="res-card" 
+                     data-id="<%= r.getId() %>"
+                     data-name="<%= r.getResName() %>"
+                     data-cuisine="<%= r.getCuisineType() %>"
+                     data-rating="<%= String.format("%.1f", r.getRating()) %>"
+                     data-reviews="500+ ratings"
+                     data-deltime="<%= delTime %>"
+                     data-delfee="Free Delivery"
+                     data-address="Banjara Hills, Hyderabad"
+                     data-image="<%= request.getContextPath() %>/Foodie/images/restaurants/<%= r.getImagePath() %>"
+                     data-discount="<%= discount %>"
+                     data-desc="Celebrated restaurant known for exceptional culinary taste, fast preparation, and premium packaging."
+                     data-context-path="<%= request.getContextPath() %>">
                     <div class="res-thumb-wrap">
                         <span class="badge-discount res-discount-badge"><%= discount %></span>
                         <button type="button" class="res-fav-btn" title="Add to favorites" onclick="toggleFav(this)">🤍</button>
@@ -854,6 +991,9 @@
 
     <!-- Unified Frosted Glass Footer -->
     <jsp:include page="/Foodie/includes/footer.jsp" />
+
+    <!-- Hero Image Carousel Controller -->
+    <script src="<%= request.getContextPath() %>/Foodie/js/hero-carousel.js"></script>
 
     <script>
         function filterHomeRestaurants(category, btn) {

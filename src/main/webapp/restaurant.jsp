@@ -420,10 +420,18 @@
                             double rating = r.getRating();
                     %>
                         <article class="res-list-card" 
-                                 data-name="<%= r.getResName().toLowerCase() %>" 
-                                 data-cuisine="<%= r.getCuisineType().toLowerCase() %>"
-                                 data-rating="<%= rating %>"
-                                 data-deltime="<%= delTime %>">
+                                 data-id="<%= r.getId() %>"
+                                 data-name="<%= r.getResName() %>" 
+                                 data-cuisine="<%= r.getCuisineType() %>"
+                                 data-rating="<%= String.format("%.1f", rating) %>"
+                                 data-reviews="12K+ reviews"
+                                 data-deltime="<%= delTime %>"
+                                 data-delfee="Free Delivery"
+                                 data-address="Banjara Hills, Hyderabad"
+                                 data-image="<%= request.getContextPath() %>/Foodie/images/restaurants/<%= r.getImagePath() %>"
+                                 data-discount="<%= discount %>"
+                                 data-desc="Top-rated destination renowned for delicious food, hygienic preparation, and swift contactless delivery."
+                                 data-context-path="<%= request.getContextPath() %>">
                             
                             <!-- Thumbnail -->
                             <img src="<%= request.getContextPath() %>/Foodie/images/restaurants/<%= r.getImagePath() %>" 
@@ -515,8 +523,8 @@
             let visibleCount = 0;
 
             cards.forEach(card => {
-                const name = card.getAttribute('data-name') || '';
-                const cuisine = card.getAttribute('data-cuisine') || '';
+                const name = (card.getAttribute('data-name') || '').toLowerCase();
+                const cuisine = (card.getAttribute('data-cuisine') || '').toLowerCase();
                 const rating = parseFloat(card.getAttribute('data-rating') || '0');
 
                 // Search query match
