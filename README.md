@@ -166,6 +166,10 @@ Install the following software before running the application:
 
 ![Uploading image.png…](https://github.com/harshatatapudi5/foodie_app/blob/main/Screenshot%202026-10-20%20001417.png?raw=true)
 
+![Uploading image.png…](https://github.com/harshatatapudi5/foodie_app/blob/main/Screenshot%202026-10-20%20001827.png?raw=true)
+
+![Uploading image.png…](https://github.com/harshatatapudi5/foodie_app/blob/main/Screenshot%202026-10-20%20002039.png?raw=true)
+
 
 ##  🔐 Security
      - Hash passwords securely before storing them.
