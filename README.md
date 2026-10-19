@@ -157,7 +157,7 @@ Install the following software before running the application:
      
 ##  📸 Application Screenshots
 
-    <img width="1637" height="1090" alt="image" src="https://github.com/user-attachments/assets/b1e1beb6-21b2-4579-ada7-9f18831de3bc" />
+    ![image alt](https://github.com/harshatatapudi5/foodie_app/blob/41491524b019d43df1df3a4d0597415e239c7d25/Screenshot%202026-10-19%20183039.png)
 
 
 
