@@ -100,133 +100,8 @@ Developer
                  MySQL Database
 
               Apache Tomcat Server
-       Hosts the Java web application
-
-
-##  📁 Project Structure
-    The following structure is based on the files and folders visible in the project explorer. Some folders may contain additional files not shown in 
-    screenshots.
-
-JEE/
-├── .settings/
-├── .vscode/
-├── build/
-├── src/
-│   └── main/
-│       ├── java/
-│       │   └── com/
-│       │       └── tap/
-│       │           ├── controller/
-│       │           │   ├── CartController.java
-│       │           │   ├── CheckOutController.java
-│       │           │   ├── LoginController.java
-│       │           │   ├── LogoutController.java
-│       │           │   ├── MenuController.java
-│       │           │   ├── OrdersController.java
-│       │           │   ├── PaymentController.java
-│       │           │   ├── ProfileController.java
-│       │           │   ├── RestaurantController.java
-│       │           │   └── SignUpController.java
-│       │           ├── DAO/
-│       │           │   ├── MenuDAO.java
-│       │           │   ├── OrderDAO.java
-│       │           │   ├── OrderItemDAO.java
-│       │           │   ├── ResDAO.java
-│       │           │   └── UserDAO.java
-│       │           ├── DAOImp/
-│       │           │   ├── DAOImp.java
-│       │           │   ├── DAOImpRes.java
-│       │           │   ├── OItemDAOImp.java
-│       │           │   ├── OrdersDAOImpI.java
-│       │           │   └── UserDAOImp.java
-│       │           ├── model/
-│       │           │   ├── Cart.java
-│       │           │   ├── CartItem.java
-│       │           │   ├── MenuData.java
-│       │           │   ├── OrderItem.java
-│       │           │   ├── OrderItemView.java
-│       │           │   ├── OrdersDetails.java
-│       │           │   ├── ResDetails.java
-│       │           │   └── User.java
-│       │           ├── test/
-│       │           │   └── BCryptTest.java
-│       │           └── util/
-│       │               ├── App.java
-│       │               ├── DBConnection.java
-│       │               └── Test.java
-│       └── webapp/
-│           ├── Foodie/
-│           │   ├── css/
-│           │   │   ├── auth.css
-│           │   │   ├── cart.css
-│           │   │   ├── home.css
-│           │   │   ├── login.css
-│           │   │   ├── menu.css
-│           │   │   ├── orders.css
-│           │   │   ├── payment.css
-│           │   │   ├── restaurants.css
-│           │   │   ├── signup.css
-│           │   │   └── theme-dark.css
-│           │   ├── images/
-│           │   │   ├── auth/
-│           │   │   ├── breakfast/
-│           │   │   ├── burgerking/
-│           │   │   ├── categories/
-│           │   │   ├── dessertfactory/
-│           │   │   ├── dominos/
-│           │   │   ├── hero/
-│           │   │   ├── kfc/
-│           │   │   ├── mcdonalds/
-│           │   │   ├── menu/
-│           │   │   ├── pizzahut/
-│           │   │   ├── restaurants/
-│           │   │   ├── spicegarden/
-│           │   │   └── subway/
-│           │   ├── includes/
-│           │   │   ├── footer.jsp
-│           │   │   └── navbar.jsp
-│           │   └── js/
-│           │       ├── auth.js
-│           │       ├── cart.js
-│           │       ├── home.js
-│           │       ├── login.js
-│           │       ├── menu.js
-│           │       ├── orders.js
-│           │       ├── payment.js
-│           │       ├── restaurants.js
-│           │       └── signup.js
-│           ├── META-INF/
-│           │   └── MANIFEST.MF
-│           ├── WEB-INF/
-│           │   ├── classes/
-│           │   ├── lib/
-│           │   └── web.xml
-│           ├── acc.html
-│           ├── cart.jsp
-│           ├── cart.html
-│           ├── checkout.jsp
-│           ├── checkout.html
-│           ├── cookie.html
-│           ├── display.html
-│           ├── home.html
-│           ├── index.jsp
-│           ├── login.jsp
-│           ├── login.html
-│           ├── menu.jsp
-│           ├── order-details.jsp
-│           ├── order-success.jsp
-│           ├── order-tracking.jsp
-│           ├── orders.jsp
-│           ├── orders-details.jsp
-│           ├── orders.html
-│           ├── pattern.jsp
-│           ├── payment.jsp
-│           ├── payment.html
-│           ├── restaurants.html
-│           └── signup.html
-├── build.ps1
-└── README.md
-
+           Hosts the Java web application
+           
 
 ## 🚀 Getting Started
 
@@ -285,6 +160,38 @@ Install the following software before running the application:
 
 
 
+
+
+##  🔐 Security
+     - Hash passwords securely before storing them.
+
+    - Validate input on the server side.
+    
+    - Protect routes that require authentication.
+    
+    - Use prepared SQL statements for database operations.
+    
+    - Keep database credentials outside public source control.
+    
+    - Configure appropriate session management.
+    
+    - Use HTTPS and secure cookie settings in production.
+
+
+##  🔮 Future Improvements
+     Possible improvements for the application include:
+
+         - Integrating a verified online payment gateway.
+
+         - Adding automated tests for controllers and DAO classes.
+        
+         - Improving input validation and error handling.
+        
+         - Adding pagination and advanced restaurant filtering.
+        
+         - Improving accessibility and mobile responsiveness.
+        
+         - Deploying the application with a production database and secure configuration.
 
 ```
 =======
