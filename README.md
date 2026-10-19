@@ -162,7 +162,7 @@ Install the following software before running the application:
 
 ![Uploading image.png…](https://github.com/harshatatapudi5/foodie_app/blob/main/Screenshot%202026-10-19%20184115.png?raw=true)
 
-
+![Uploading image.png…](https://github.com/harshatatapudi5/foodie_app/blob/main/Screenshot%202026-10-20%20000949.png?raw=true)
 
 
 
