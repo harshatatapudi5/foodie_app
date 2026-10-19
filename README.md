@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🍴 Foodie — Premium Online Food Ordering Application
 
 Foodie is a full-stack Java / Jakarta EE web application for online food delivery, featuring a modern **Aurora Glassmorphism UI**, secure authentication, dynamic cart management, order tracking, and MySQL persistence.
@@ -48,3 +49,6 @@ Open in browser:
 ```
 http://localhost:8080/JEE/
 ```
+=======
+# foodie_app
+>>>>>>> 332571710955c0330f20b2f980d889454f7775f4
